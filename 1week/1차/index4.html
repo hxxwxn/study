@@ -1,94 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 초기설정 */
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             font: inherit;
             color: inherit;
         }
-
         body {
             line-height: 1;
         }
-
         ul {
             list-style: none;
         }
-
         a {
             text-decoration: none;
         }
-
         img {
             display: block;
             max-width: 100%;
         }
+        /* 초기설정 끝 */
 
-
+        /* 상단 */
         header .top {
-            background: #ccc;
             position: relative;
             height: 300px;
+            background: #ccc;
         }
-
-        header h1 {
+        header h1{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: #f00;
 
+            background: #f00;
             width: 100px;
             height: 50px;
         }
-
-        header h1 a {
+        header h1 a{
             display: block;
             height: inherit;
         }
-
-        header .sns {
+        header .sns{
             position: absolute;
-            top: 0;
             left: 0;
-        }
-
-        header .login {
-            position: absolute;
             top: 0;
+        }
+        header .login{
+            position: absolute;
             right: 0;
+            top: 0;
         }
 
         header .bottom {
             background: #888;
             text-align: center;
         }
-
         header ul {
             overflow: hidden;
             background: hotpink;
             display: inline-block;
             vertical-align: top;
-            /* 밑의 여백지우기 */
             line-height: 50px;
         }
-
-        header ul li {
+        header li {
             float: left;
             padding: 0 10px;
+        }
 
+        /* 메인 */
+        main {
+            width: 800px;
+            margin: 10px auto;
+        }
+
+        /* 1st box */
+        .box1 {
+            background: #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .box1 .top {
+            height: 200px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .box1 .bottom {
+            background: #fff;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .box1 .left {
+            float: left;
+            background: #00f;
+            width: calc(100% - 160px);
+            overflow: hidden;
+        }
+        .box1 .left li {
+            float: left;
+            width: calc((100% - 20px) / 3);
+            height: 200px;
+            background: #f00;
+            margin-right: 10px;
+        }
+        .box1 .left li:nth-child(3n) {
+            margin-right: 0;
+        }
+        .box1 .left li:nth-child(n+4) {
+            margin-top: 10px;
+        }
+        .box1 .right {
+            float: right;
+            width: 150px;
+            background: #f00;
+            height: 410px;
+        }
+
+
+        /* 2nd box */
+        .box2 {
+            background: #ccc;
+            padding: 10px;
+        }
+        .box2 li+li {
+            margin-top: 10px;
+        }
+        .box2 a {
+            display: block;
+        }
+        .box2 img {
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+        }
+        .box2 p {
+            overflow: hidden;
+            height: 150px;
+            background: #fff;
         }
     </style>
 </head>
-
 <body>
+    <!-- 상단 -->
     <header>
         <div class="top">
             <h1><a href="">logo</a></h1>
@@ -104,60 +164,7 @@
             </ul>
         </nav>
     </header>
-
-    <style>
-        main {
-            width: 800px;
-            margin: 10px auto;
-        }
-
-        .box1 {
-            background: #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        .box1 .top {
-            background: #fff;
-            height: 200px;
-            margin-bottom: 10px;
-        }
-
-        .box1 .bottom {
-            background: #fff;
-            padding: 10px;
-            overflow: hidden;
-        }
-
-        .box1 .left {
-            float: left;
-            width: calc(100% - 160px);
-            background: #00f;
-            overflow: hidden;
-        }
-
-        .box1 .left li {
-            float: left;
-            width: calc((100% - 20px) / 3);
-            height: 200px;
-            background: #f00;
-            margin-right: 10px;
-        }
-        .box1 .left li:nth-child(3n) {
-            margin-right: 0;
-        }
-        .box1 .left li:nth-child(n+4) {
-            margin-top: 10px;
-        }
-        /* .box1 .left li:nth-child(-n+4) {} 4이하 위에는 4이상 선택 */
-
-        .box1 .right {
-            float: right;
-            width: 150px;
-            background: #f00;
-            height: 410px;
-        }
-    </style>
+    <!-- 메인 -->
     <main>
         <div class="box1">
             <div class="top">top</div>
@@ -170,70 +177,41 @@
                     <li>5</li>
                     <li>6</li>
                 </ul>
-                <div class="right">right</div>
+                <div class="right">
+                    right
+                </div>
             </div>
         </div>
-
-        <style>
-            .box2 {
-                padding: 10px;
-                background: #ccc;
-            }
-            .box2 li+li{
-                margin-top: 10px;
-            }
-
-            .box2 a{
-                display: block;
-            }
-            .box2 a img{
-                float: left;
-                width: 150px;
-                height: 150px;
-                margin-right: 10px;
-            }
-            .box2 a p{
-                overflow: hidden; 
-                /* 나머지 영역 채워주세요 높이가 내용물에 필수 */
-                height: 150px;
-                background: #fff;
-            }
-        </style>
-
         <div class="box2">
             <ul>
                 <li>
                     <a href="">
-                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg"
-                            alt="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
                         <p>Lorem ipsum dolor sit amet.</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg"
-                            alt="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
                         <p>Lorem ipsum dolor sit amet.</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg"
-                            alt="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
                         <p>Lorem ipsum dolor sit amet.</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg"
-                            alt="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
                         <p>Lorem ipsum dolor sit amet.</p>
                     </a>
                 </li>
             </ul>
         </div>
     </main>
+    <!-- 하단 -->
     <footer>footer</footer>
 </body>
- <!-- 제일 빠른 사람이 7분걸렸대! -->
 </html>
