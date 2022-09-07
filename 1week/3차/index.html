@@ -4,62 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1주차 - float</title>
-
+    <title>Document</title>
     <style>
+        /* 초기설정 */
+        *{margin: 0; padding: 0;}
 
-        * {
-            margin: 0; 
-            padding: 0;
-        }
         body {
             background: #ccc;
         }
+        /* 초기설정 끝 */
+
+        /* 상단 */
         header {
             height: 100px;
             background: #000;
         }
+        /* 메인 */
         main {
             width: 800px;
             margin: 10px auto;
         }
-        /* 인접요소 왕따 선택 - 첫번째 빼고 */
-        main > *+* { 
-            /* main>*+* 이렇게 잘 쓴대요 */
+
+        main > * + * {
             margin-top: 10px;
         }
+
+        /* 1st box */
         .box1 {
             height: 200px;
             background: #fff;
         }
 
-        /* fl
-        알맹이에 사용 */
-        .box2 {overflow: hidden;}
-        .box2 div {
+        /* 2nd box */
+        .box2 {
+            overflow: hidden;
+        }
+        .box2 div{
             float: left;
             width: calc((100% - 20px) / 3);
             height: 200px;
             background: #fff;
+
             margin-right: 10px;
         }
-        .box2 div:last-child {
+        .box2 div:last-child{
             margin-right: 0;
         }
-        .box3 {overflow: hidden;}
-        .box3 div {
+
+        /* 3rd box */
+        .box3 {
+            overflow: hidden;
+        }
+        .box3 div{
             float: left;
             width: calc((100% - 40px) / 5);
             height: 200px;
             background: #fff;
             margin-right: 10px;
         }
-        .box3 div:last-child {
+        .box3 div:last-child{
             margin-right: 0;
         }
+
+        /* 4th box */
+        .box4 {
+            padding: 10px;
+            background: #f00;
+            overflow: hidden;
+        }
+        .box4 div{
+            float: left;
+            width: calc(50% - 5px);
+            height: 200px;
+            background: #fff;
+        }
+        .box4 div:last-child{
+            float: right;
+        }
     </style>
-
-
 </head>
 <body>
     <header>header</header>
@@ -77,30 +99,10 @@
             <div>@</div>
             <div>@</div>
         </div>
-
-        <style>
-            .box4 {
-                overflow: hidden;
-                background: #f00;
-                padding: 10px;
-        }
-
-            .box4 div {float: left;
-            width: calc(50% - 5px);
-            height: 200px;
-            background: #fff;
-            }
-            .box4 div:last-child {
-                float: right;
-            }
-        </style>
-
         <div class="box4">
             <div>@</div>
             <div>@</div>
         </div>
-
-        <!-- 5분 이내로 완성해야 -->
     </main>
 </body>
 </html>
