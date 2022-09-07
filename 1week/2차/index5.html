@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기설정 */
+        * {
+            margin: 0; padding: 0;
+            color: inherit;
+            font: inherit;
+        }
+        body {line-height: 1;}
+        ul{list-style: none;}
+        img{max-width: 100%; display: block;}
+        a{text-decoration: none;}
+        /* 초기설정 끝 */
+        /* 상단 */
+        header {
+            height: 100px;
+            background: #000;
+        }
+        /* 메인 */
+        .inner {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 1st box */
+        .box1 {
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .box1 div{
+            float: left;
+            height: 200px;
+            background: #888;
+            width: calc(50% - 5px);
+        }
+        .box1 div:last-child{
+            position: relative;
+            float: right;
+        }
+        .box1 .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .box1 .btn.prev {
+            left: 10px;
+        }
+        
+        .box1 .btn.next {
+            right: 10px;
+        }
+
+        /* 2nd box */
+        .box2 {
+            height: 100px;
+            background: #000;
+        }
+
+        /* 3rd box */
+        .box3 {
+            background: #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .box3 .wrap{
+            background: #fff;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .box3 .wrap div{
+            float: left;
+            height: 200px;
+            background: #888;
+        }
+        .box3 .wrap div:nth-child(1){
+            width: calc(70% - 5px);
+        }
+        .box3 .wrap div:nth-child(2){
+            width: calc(30% - 5px);
+            float: right;
+
+        }
+        .box3 .wrap div:nth-child(3){
+            width: calc(20% - 5px);
+            margin-top: 10px;
+
+        }
+        .box3 .wrap div:nth-child(4){
+            width: calc(80% - 5px);
+            float: right;
+            margin-top: 10px;
+        }
+
+        /* 4th box */
+        .box4 {
+            background: #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .box4 h2{
+            float: left;
+            line-height: 50px;
+        }
+        .box4 .btns{
+            float: right;
+        }
+        .box4 .btns a{
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            float: left;
+        }
+        
+        /* 5th box */
+        .box5 ul{
+            overflow: hidden;
+        }
+        .box5 li{
+            float: left;
+            width: calc((100% - 30px) / 4);
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .box5 li:nth-child(4n){
+            margin-right: 0;
+        }
+        .box5 li a{
+            display: block;
+            background: #f00;
+            padding: 10px;
+        }
+        .box5 li strong{
+            display: block;
+            padding: 10px;
+            background: #fff;
+            margin: 10px 0;
+        }
+        .box5 li p{
+            padding: 10px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 -->
+    <header>header</header>
+    <!-- 메인 -->
+    <main>
+        <div class="inner">
+            <section class="box1">
+            <div></div>
+            <div>
+                <a href="" class="btn prev">이전</a>
+                <a href="" class="btn next">다음</a>
+            </div>
+            </section>
+        </div>
+        <section class="box2">banner</section>
+        <div class="inner">
+            <section class="box3">
+                <div class="wrap">
+                    <div>70%</div>
+                    <div>30%</div>
+                    <div>20%</div>
+                    <div>80%</div>
+                </div>
+            </section>
+            <section class="box4">
+                <h2>공지사항</h2>
+                <div class="btns">
+                    <a href="">이전</a>
+                    <a href="">다음</a>
+                </div>
+            </section>
+            <section class="box5">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                            <strong>강조제목</strong>
+                            <p>내용 문단</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                            <strong>강조제목</strong>
+                            <p>내용 문단</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                            <strong>강조제목</strong>
+                            <p>내용 문단</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                            <strong>강조제목</strong>
+                            <p>내용 문단</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                            <strong>강조제목</strong>
+                            <p>내용 문단</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                            <strong>강조제목</strong>
+                            <p>내용 문단</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                            <strong>강조제목</strong>
+                            <p>내용 문단</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                            <strong>강조제목</strong>
+                            <p>내용 문단</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>

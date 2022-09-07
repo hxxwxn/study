@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기설정 */
+        *{
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            font: inherit;
+        }
+        body {
+            line-height: 1;
+        }
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        img{
+            max-width: 100%;
+            display: block;
+        }
+        /* 초기설정 끝 */
+
+        /* 상단 */
+        header .top {
+            position: relative;
+            background: #ccc;
+            height: 300px;
+        }
+        header .top h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 100px;
+            height: 50px;
+            background: #f00;
+        }
+        header .top h1 a{
+            display: block;
+            height: inherit;
+        }
+        header .sns{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        header .login{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        header .bottom {
+            background: #888;
+            text-align: center;
+        }
+        header ul{
+            overflow: hidden;
+            background: hotpink;
+            display: inline-block;
+            line-height: 50px;
+            vertical-align: top;
+        }
+        header li{
+            float: left;
+            padding: 0 10px;
+        }
+        /* 메인 */
+        main {
+            width: 800px;
+            margin: 10px auto;
+        }
+
+        /* 1st box */
+        .box1 {
+            background: #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .box1 .top{
+            height: 200px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .box1 .bottom{
+            background: #fff;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .box1 .left{
+            float: left;
+            width: calc(100% - 160px);
+            background: #00f;
+        }
+        .box1 .left li{
+            float: left;
+            width: calc((100% - 20px) / 3);
+            margin-right: 10px;
+            height: 200px;
+            background: #f00;
+        }
+
+        .box1 .left li:nth-child(3n) {
+            margin-right: 0;
+        }
+        .box1 .left li:nth-child(n+4) {
+            margin-top: 10px;
+        }
+        .box1 .right{
+            width: 150px;
+            float: right;
+            background: #f00;
+            height: 410px;
+        }
+        
+        /* 2nd box */
+        .box2 {
+            background: #ccc;
+            padding: 10px;
+        }
+        .box2 li+li {
+            margin-top: 10px;
+        }
+        .box2 li a {
+            display: block;
+        }
+        .box2 a img {
+            float: left;
+            margin-right: 10px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .box2 a p {
+            height: 150px;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 -->
+    <header>
+        <div class="top">
+            <h1><a href="">logo</a></h1>
+            <div class="sns">@</div>
+            <div class="login">@</div>
+        </div>
+        <nav class="bottom">
+            <ul>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu2</a></li>
+                <li><a href="">menu3</a></li>
+                <li><a href="">menu4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 메인 -->
+    <main>
+        <div class="box1">
+            <div class="top">top</div>
+            <div class="bottom">
+                <ul class="left">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <div class="right">right</div>
+            </div>
+        </div>
+        <div class="box2">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>

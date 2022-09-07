@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;padding: 0;
+        }
+
+        body {
+            background: #ccc;
+        }
+        /* 상단 */
+        header {
+            height: 100px;
+            background: #000;
+        }
+
+        /* 메인 */
+        main {
+            margin: 10px auto;
+            width: 800px;
+        }
+
+        main > * + *  {
+            margin-top: 10px;
+        }
+
+        /* 1st box */
+        .box1 {
+            height: 200px;
+            background: #fff;
+        }
+
+        /* 2nd box */
+        
+        .box2 {
+            overflow: hidden;
+        }
+        .box2 div{
+            float: left;
+            height: 200px;
+            width: calc((100% - 20px) / 3);
+            margin-right: 10px;
+            background: #fff;
+        }
+        .box2 div:last-child{
+            margin-right: 0;
+        }
+
+        /* 3rd box */
+        .box3 {
+            overflow: hidden;
+        }
+        .box3 div{
+            float: left;
+            height: 200px;
+            width: calc((100% - 40px) / 5);
+            background: #fff;
+            margin-right: 10px;
+        }
+        .box3 div:last-child{
+            margin-right: 0;
+        }
+
+        /* 4th box */
+        .box4 {
+            padding: 10px;
+            background: #f00;
+            overflow: hidden;
+        }
+        .box4 div{
+            float: left;
+            width: calc(50% - 5px);
+            height: 200px;
+            background: #fff;
+
+        }
+        .box4 div:last-child{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 -->
+    <header>header</header>
+    <!-- 메인 -->
+    <main>
+        <div class="box1"></div>
+        <div class="box2">
+            <div>@</div>
+            <div>@</div>
+            <div>@</div>
+        </div>
+        <div class="box3">
+            <div>@</div>
+            <div>@</div>
+            <div>@</div>
+            <div>@</div>
+            <div>@</div>
+        </div>
+        <div class="box4">
+            <div>@</div>
+            <div>@</div>
+        </div>
+    </main>
+</body>
+</html>
