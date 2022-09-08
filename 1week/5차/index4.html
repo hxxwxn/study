@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            color: inherit;
+            font: inherit;
+        }
+        body{line-height: 1;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        img{
+            max-width: 100%;
+            display: block;
+        }
+
+        header .top{
+            background: #ccc;
+            position: relative;
+            height: 300px;
+        }
+        header .top h1{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #f00;
+
+        }
+        header .top h1 a{
+            display: block;
+            height: inherit;
+        }
+        header .sns{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        header .login{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        header .bottom {
+            background: #888;
+            text-align: center;
+        }
+        header ul{
+            display: inline-block;
+            background: hotpink;
+            overflow: hidden;
+            line-height: 50px;
+            vertical-align: top;
+        }
+        header li{
+            float: left;
+            padding: 0 10px;
+        }
+
+        main {
+            width: 800px;
+            margin: 10px auto;
+        }
+
+        .box1 {
+            background: #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .box1 .top{
+            background: #fff;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+        .box1 .bottom{
+            background: #fff;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .box1 .left{
+            float: left;
+            width: calc(100% - 160px);
+            overflow: hidden;
+            background: #00f;
+        }
+        .box1 .left li{
+            float: left;
+            width: calc((100% - 20px) / 3);
+            background: #f00;
+            height: 200px;
+            margin-right: 10px;
+        }
+        .box1 .left li:nth-child(3n){
+            margin-right: 0;
+        }
+        .box1 .left li:nth-child(n+4){
+            margin-top: 10px;
+        }
+        .box1 .right{
+            float: right;
+            width: 150px;
+            background: #f00;
+            height: 410px;
+        }
+
+        .box2 {
+            background: #ccc;
+            padding: 10px;
+        }
+        .box2 li + li {
+            margin-top: 10px;
+        }
+        .box2 a {
+            /* display: block; */
+        }
+        .box2 img{
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+        }
+        .box2 p{
+            overflow: hidden;
+            height: 150px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <h1><a href="">logo</a></h1>
+            <div class="sns">@</div>
+            <div class="login">@</div>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu2</a></li>
+                <li><a href="">menu3</a></li>
+                <li><a href="">menu4</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="box1">
+            <div class="top">top</div>
+            <div class="bottom">
+                <ul class="left">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <div class="right">right</div>
+            </div>
+        </section>
+        <section class="box2">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>
+<!-- 12분 30초 -->
