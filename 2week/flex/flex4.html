@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+</head>
+<body>
+    <style>
+        header nav {
+            background: #ccc;
+        }
+        header nav ul{
+            display: flex;
+            justify-content: center;
+            line-height: 50px;
+            gap: 20px;
+        }
+    </style>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        .box1 {
+            margin: 10px auto;
+            box-sizing: border-box;
+            width: 800px;
+            padding: 10px;
+            background: #ccc;
+        }
+
+        .box1 .top {
+            height: 100px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+
+        .box1 .bottom {
+            display: flex;
+            /* align-items: stretch; 기본값 이래서 높이 같음 */
+        }
+        .box1 .left{
+            flex: 1;
+            /* background: #00f; */
+            margin-right: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .box1 .left li {
+            width: calc((100% - 20px) / 3);
+            background: #f00;
+            height: 100px;
+        }
+        .box1 .right{
+            width: 150px;
+            background: #f00;
+        }
+    </style>
+    <div class="box1">
+        <div class="top">top</div>
+        <div class="bottom">
+            <ul class="left">
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+            <div class="right">right</div>
+        </div>
+    </div>
+    <style>
+        .box2 {
+            width: 800px;
+            margin: 10px auto;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #ccc;
+        }
+
+        .box2 li+li{
+            margin-top: 10px;
+        }
+        .box2 a {
+            display: flex;
+        }
+        .box2 .img {
+            width: 150px;
+            height: 150px;
+            background: #f00;
+            flex-shrink: 0;
+        }
+
+        .box2 .text {
+            background: #fff;
+            font: 1px;
+            margin-left: 10px;
+
+            /* 말줄임 */
+            overflow: hidden;
+            line-height: 20px;
+            max-height: 60px; /* 3줄 하려면 60px */
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;/* 3줄 */
+            -webkit-box-orient: vertical;/* 여러줄 말줄임 */
+        }
+    </style>
+    <div class="box2">
+        <ul>
+            <li>
+                <a href="">
+                    <div class="img">img</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quae magni, accusantium perspiciatis numquam vero eaque. Magni quod obcaecati, deserunt quae consequatur corporis laboriosam totam quisquam ab! Provident obcaecati porro omnis recusandae aperiam a excepturi, dolorem eius molestias labore doloremque, aliquam suscipit quisquam ut ea atque quis cupiditate iste necessitatibus. Doloremque nemo dicta numquam voluptatibus tempora, commodi rem id sunt, neque dignissimos quibusdam at, harum veniam aut cumque incidunt accusantium tempore officiis eius vitae repellat. Optio sequi quasi, commodi similique ad excepturi eligendi earum ea explicabo consequuntur esse amet iure vero quisquam sit! Dolorem perspiciatis repudiandae odit consequuntur repellendus eaque vel laborum nihil natus saepe, aliquam libero explicabo, quasi sit corporis ad deserunt vitae. Exercitationem accusantium illo sunt corporis non dignissimos rerum rem reprehenderit molestias doloremque quidem eveniet ab expedita omnis, excepturi, dolores magnam, consequuntur eaque voluptas earum aperiam! Laboriosam sit sequi tempora velit fugit fugiat numquam? Ad deserunt eius excepturi nihil laborum quibusdam laudantium possimus culpa illo, beatae quod repellat pariatur velit dolorum temporibus minima aliquam ex at, porro cupiditate? Doloribus error pariatur aperiam quidem quam a provident optio illum nesciunt eum ut quos beatae quasi odit dolorem, molestiae impedit? Illum dignissimos id corrupti nam dolores vero aperiam laudantium nihil, velit numquam at incidunt similique omnis qui voluptate nesciunt sequi. Ipsum ex illum quaerat odio at. Quasi incidunt quidem hic in optio officiis natus. Tempore ducimus facere alias autem ut delectus non sequi aspernatur optio ab? Similique ducimus saepe voluptatem. Inventore assumenda qui saepe possimus numquam odit iusto ut doloribus adipisci reprehenderit sequi id repellat error, unde placeat facere, praesentium, tempora odio? Debitis nobis facere voluptates minus provident, necessitatibus dolores saepe architecto reiciendis similique laboriosam hic consectetur praesentium perspiciatis nisi perferendis nihil quos sed deleniti aspernatur quasi vitae doloribus! Minus, ipsam quasi. Dolor eius repudiandae mollitia unde enim suscipit.
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="img">img</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quae magni, accusantium perspiciatis numquam vero eaque. Magni quod obcaecati, deserunt quae consequatur corporis laboriosam totam quisquam ab! Provident obcaecati porro omnis recusandae aperiam a excepturi, dolorem eius molestias labore doloremque, aliquam suscipit quisquam ut ea atque quis cupiditate iste necessitatibus. Doloremque nemo dicta numquam voluptatibus tempora, commodi rem id sunt, neque dignissimos quibusdam at, harum veniam aut cumque incidunt accusantium tempore officiis eius vitae repellat. Optio sequi quasi, commodi similique ad excepturi eligendi earum ea explicabo consequuntur esse amet iure vero quisquam sit! Dolorem perspiciatis repudiandae odit consequuntur repellendus eaque vel laborum nihil natus saepe, aliquam libero explicabo, quasi sit corporis ad deserunt vitae. Exercitationem accusantium illo sunt corporis non dignissimos rerum rem reprehenderit molestias doloremque quidem eveniet ab expedita omnis, excepturi, dolores magnam, consequuntur eaque voluptas earum aperiam! Laboriosam sit sequi tempora velit fugit fugiat numquam? Ad deserunt eius excepturi nihil laborum quibusdam laudantium possimus culpa illo, beatae quod repellat pariatur velit dolorum temporibus minima aliquam ex at, porro cupiditate? Doloribus error pariatur aperiam quidem quam a provident optio illum nesciunt eum ut quos beatae quasi odit dolorem, molestiae impedit? Illum dignissimos id corrupti nam dolores vero aperiam laudantium nihil, velit numquam at incidunt similique omnis qui voluptate nesciunt sequi. Ipsum ex illum quaerat odio at. Quasi incidunt quidem hic in optio officiis natus. Tempore ducimus facere alias autem ut delectus non sequi aspernatur optio ab? Similique ducimus saepe voluptatem. Inventore assumenda qui saepe possimus numquam odit iusto ut doloribus adipisci reprehenderit sequi id repellat error, unde placeat facere, praesentium, tempora odio? Debitis nobis facere voluptates minus provident, necessitatibus dolores saepe architecto reiciendis similique laboriosam hic consectetur praesentium perspiciatis nisi perferendis nihil quos sed deleniti aspernatur quasi vitae doloribus! Minus, ipsam quasi. Dolor eius repudiandae mollitia unde enim suscipit.
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="img">img</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quae magni, accusantium perspiciatis numquam vero eaque. Magni quod obcaecati, deserunt quae consequatur corporis laboriosam totam quisquam ab! Provident obcaecati porro omnis recusandae aperiam a excepturi, dolorem eius molestias labore doloremque, aliquam suscipit quisquam ut ea atque quis cupiditate iste necessitatibus. Doloremque nemo dicta numquam voluptatibus tempora, commodi rem id sunt, neque dignissimos quibusdam at, harum veniam aut cumque incidunt accusantium tempore officiis eius vitae repellat. Optio sequi quasi, commodi similique ad excepturi eligendi earum ea explicabo consequuntur esse amet iure vero quisquam sit! Dolorem perspiciatis repudiandae odit consequuntur repellendus eaque vel laborum nihil natus saepe, aliquam libero explicabo, quasi sit corporis ad deserunt vitae. Exercitationem accusantium illo sunt corporis non dignissimos rerum rem reprehenderit molestias doloremque quidem eveniet ab expedita omnis, excepturi, dolores magnam, consequuntur eaque voluptas earum aperiam! Laboriosam sit sequi tempora velit fugit fugiat numquam? Ad deserunt eius excepturi nihil laborum quibusdam laudantium possimus culpa illo, beatae quod repellat pariatur velit dolorum temporibus minima aliquam ex at, porro cupiditate? Doloribus error pariatur aperiam quidem quam a provident optio illum nesciunt eum ut quos beatae quasi odit dolorem, molestiae impedit? Illum dignissimos id corrupti nam dolores vero aperiam laudantium nihil, velit numquam at incidunt similique omnis qui voluptate nesciunt sequi. Ipsum ex illum quaerat odio at. Quasi incidunt quidem hic in optio officiis natus. Tempore ducimus facere alias autem ut delectus non sequi aspernatur optio ab? Similique ducimus saepe voluptatem. Inventore assumenda qui saepe possimus numquam odit iusto ut doloribus adipisci reprehenderit sequi id repellat error, unde placeat facere, praesentium, tempora odio? Debitis nobis facere voluptates minus provident, necessitatibus dolores saepe architecto reiciendis similique laboriosam hic consectetur praesentium perspiciatis nisi perferendis nihil quos sed deleniti aspernatur quasi vitae doloribus! Minus, ipsam quasi. Dolor eius repudiandae mollitia unde enim suscipit.
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="img">img</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quae magni, accusantium perspiciatis numquam vero eaque. Magni quod obcaecati, deserunt quae consequatur corporis laboriosam totam quisquam ab! Provident obcaecati porro omnis recusandae aperiam a excepturi, dolorem eius molestias labore doloremque, aliquam suscipit quisquam ut ea atque quis cupiditate iste necessitatibus. Doloremque nemo dicta numquam voluptatibus tempora, commodi rem id sunt, neque dignissimos quibusdam at, harum veniam aut cumque incidunt accusantium tempore officiis eius vitae repellat. Optio sequi quasi, commodi similique ad excepturi eligendi earum ea explicabo consequuntur esse amet iure vero quisquam sit! Dolorem perspiciatis repudiandae odit consequuntur repellendus eaque vel laborum nihil natus saepe, aliquam libero explicabo, quasi sit corporis ad deserunt vitae. Exercitationem accusantium illo sunt corporis non dignissimos rerum rem reprehenderit molestias doloremque quidem eveniet ab expedita omnis, excepturi, dolores magnam, consequuntur eaque voluptas earum aperiam! Laboriosam sit sequi tempora velit fugit fugiat numquam? Ad deserunt eius excepturi nihil laborum quibusdam laudantium possimus culpa illo, beatae quod repellat pariatur velit dolorum temporibus minima aliquam ex at, porro cupiditate? Doloribus error pariatur aperiam quidem quam a provident optio illum nesciunt eum ut quos beatae quasi odit dolorem, molestiae impedit? Illum dignissimos id corrupti nam dolores vero aperiam laudantium nihil, velit numquam at incidunt similique omnis qui voluptate nesciunt sequi. Ipsum ex illum quaerat odio at. Quasi incidunt quidem hic in optio officiis natus. Tempore ducimus facere alias autem ut delectus non sequi aspernatur optio ab? Similique ducimus saepe voluptatem. Inventore assumenda qui saepe possimus numquam odit iusto ut doloribus adipisci reprehenderit sequi id repellat error, unde placeat facere, praesentium, tempora odio? Debitis nobis facere voluptates minus provident, necessitatibus dolores saepe architecto reiciendis similique laboriosam hic consectetur praesentium perspiciatis nisi perferendis nihil quos sed deleniti aspernatur quasi vitae doloribus! Minus, ipsam quasi. Dolor eius repudiandae mollitia unde enim suscipit.
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

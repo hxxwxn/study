@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        header {
+            position: relative;
+            height: 200px;
+            background: #ccc;
+            display: flex;
+            justify-content: space-between;
+        }
+        header h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        header .sns{
+            /* order: -1; */
+        }
+        .box1{
+            height: 300px;
+            background: #888;
+            position: relative;
+
+        }
+        .box1 .pagination{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .box1 .pagination span{
+            background: #f00;
+            width: 30px;
+            height: 30px;
+        }
+
+        .box2 {
+            padding: 100px 0;
+        }
+        .box2 h2{
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        .box2 ul{
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+        .box2 ul li{
+            flex: 1;
+            min-width: 0;
+        }
+        .box2 ul a{
+            padding: 10px;
+            background: #f00;
+            display: block;
+        }
+        .box2 ul img{
+            width: 100%;
+        }
+        .box2 ul p{
+            background: #fff;
+            margin-top: 10px;
+            padding: 10px;
+            white-space: nowrap; /* li에 min-width: 0있어야 말줄임 가능 */
+            overflow: hidden; /* 잘림 */
+            text-overflow: ellipsis;
+        }
+    </style>
+
+    <style>
+        .box3 {
+            padding: 100px 0;
+            background: #f00;
+        }
+        .box3 ul {
+            display: flex;
+            width: 800px;
+            margin: 0 auto;
+            flex-direction: column;
+            gap: 10px
+        }
+        .box3 ul li{
+            background: #fff;
+            flex-basis: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- wai-area > role // aria-label -->
+    <header>
+        <h1><a href="">네이버</a></h1>
+        <div class="sns">sns</div>
+        <div class="login">login</div>
+    </header>
+    <main>
+        <section class="box1">
+            <h2 class="blind">메인슬라이드</h2>
+            <a href="" class="btn prev" roll="button" aria-label="이전 슬라이드">prev</a>
+            <a href="" class="btn next" roll="button" aria-label="다음 슬라이드">next</a>
+            <div class="pagination">
+                <span class="active">1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+        </section>
+        <section class="box2">
+            <h2 class="blind">이벤트</h2><!-- 영역의 제목은 h2 -->
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.dfsdfsfa as asfad</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="box3">
+            <h2 class="blind">공지사항</h2>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </section>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>

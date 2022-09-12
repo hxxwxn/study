@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        body {
+            background: #ccc;
+        }
+
+        main {
+            width: 800px;
+            margin: 10px auto;
+        }
+
+        /* gap */
+        .box1 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .box1 div {
+            flex: 1;
+            height: 200px;
+            background: #fff;
+        }
+
+        /* 올빼미 방식 */
+        .box2 {
+            display: flex;
+            margin-top: 10px;
+        }
+        .box2 > * {
+            flex: 1px;
+            height: 200px;
+            background: #fff;
+
+        }
+        .box2 > *+*{
+            margin-left: 10px;
+        }
+
+        /* 스페이스 비트윈 방식 */
+        .box3 {
+            background: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box3 div{
+            width: calc(50% - 5px);
+            background: #f00;
+            height: 200px;
+
+        }
+        .box4 {
+            background: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box4 div{
+            width: calc(80% - 5px);
+            background: #f00;
+            height: 200px;
+        }
+        .box4 div:last-child {
+            width: calc(20% - 5px);
+        }
+        /* .box5 {
+           display: flex;
+           gap: 10px;
+        }
+        .box5 div{
+            width: 80%;
+        }
+        .box5 div:last-child {
+            width: 20%;
+        } */
+
+        .box5{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            gap: 10px;
+        }
+        .box5 div{
+            grid-column: 1/4;
+        }
+        .box5 div:last-child{
+            grid-column: 4/13;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="box2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <div class="box3">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="box4">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="box5">
+            <div>1</div>
+            <div>2</div>
+        </div>
+    </main>
+</body>
+
+</html>

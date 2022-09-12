@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            font: inherit;
+        }
+        body {line-height: 1;}
+        ul {list-style: none;}
+        img{
+            max-width: 100%;
+            display: block;
+        }
+        a{text-decoration: none;}
+
+        header {
+            position: relative;
+            background: #ccc;
+            height: 200px;
+        }
+        header h1{
+            position: absolute;
+            background: #f00;
+            width: 100px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+        header h1 a{
+            display: block;
+            height: inherit;
+        }
+        header .sns{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        header .login{
+            position: absolute;
+            top: 0;right: 0;
+        }
+
+        .box1 {
+            background: #888;
+            height: 300px;
+            position: relative;
+        }
+        .box1 .btn{
+            position: absolute;
+            width: 50px;
+            height: 50px; 
+            background: #f00;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px; 
+        }
+        .box1 .btn.prev{
+            left: 10px;
+        }
+        .box1 .btn.next{
+            right: 10px;
+            left: auto;
+        }
+        .box1 .pagination{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .box1 .pagination span{
+            float: left;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background: #fff;
+        }
+        .box1 .pagination .active{
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="">네이버</a></h1>
+        <div class="sns">@</div>
+        <div class="login">@</div>
+    </header>
+
+    <main>
+        <section class="box1">
+            <a href="" class="btn prev"></a>
+            <a href="" class="btn next"></a>
+            <div class="pagination">
+                <span class="active">1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+        </section>
+        <section class="box2">
+            <h2>이벤트</h2>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://ssl.pstatic.net/melona/libs/1403/1403107/f7f62e8900616a3f85a3_20220822170256633.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="box3">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

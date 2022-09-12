@@ -1,0 +1,56 @@
+@mixin position($position:null) {
+    position: absolute;
+    @if($position=="ct") {
+        
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @else if($position=='vt') {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @else {
+        
+    left: 50%;
+    transform: translateX(-50%);
+    }
+}
+
+
+// @mixin ellips {
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }
+
+@mixin ellips($line:1, $lineHeight:20px) {
+    // :1 이게 디폴트라는 의미
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @if($line > 1) {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+        max-height: $line*$lineHeight;
+        line-height: $lineHeight;
+    }
+
+    @else {
+        white-space: nowrap;
+    }
+
+}
+
+// @mixin ellips-multi($line,$lineHeight) {
+//     display: -webkit-box;
+//     -webkit-box-orient: vertical;
+//     -webkit-line-clamp: $line;
+//     overflow: hidden;
+//     max-height: $line*$lineHeight;
+//     line-height: $lineHeight;
+//     text-overflow: ellipsis;
+// }

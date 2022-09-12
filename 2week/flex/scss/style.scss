@@ -1,0 +1,24 @@
+// 정확한 소분 유지보수가 엄청 쉬움
+// 재사용 개편함!
+// 변수를 활용
+// 중첩을 상당히 편하게 쓸 수 있음!
+
+// * _언더바가 들어간 파일명은 변환되지 않음! css로!!
+// 즉 scss 용도로만 쓴다는 것임!!
+
+// 소통 허브인 거지
+
+@import './utills/var';
+@import './utills/mixins';
+
+@import './base/reset';
+@import './base/preset';
+
+@import './layout/header';
+@import './layout/footer';
+
+@import './pages/flex1';
+@import './pages/flex2';
+@import './pages/flex3';
+@import './pages/flex4';
+@import './pages/flex5';

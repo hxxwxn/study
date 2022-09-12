@@ -1,0 +1,102 @@
+
+
+#flex5 { // 안겹치려고
+
+    .box1 {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+        .slide{
+            position: relative;
+            flex: 1;
+            height: 200px;
+            background: #ccc;
+        }
+        .btn{
+            width: 30px;
+            height: 30px;
+            background: #f00;
+            @include position("vt");
+
+            &.prev{left: 10px;}
+            &.next{right: 10px;}
+        }
+    }
+
+    .box2 {
+        height: 100px;
+        background: #00f;
+        margin-bottom: 10px;
+    }
+
+    .box3 {
+        padding: 10px;
+        background: #ccc;
+        ul{
+            background: #fff;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        li {
+            background: #00f;
+            height: 100px;
+            &:nth-child(1) {width: calc(80% - 5px);}
+            &:nth-child(2) {width: calc(20% - 5px);}
+            &:nth-child(3) {width: calc(30% - 5px);}
+            &:nth-child(4) {width: calc(70% - 5px);}
+        }
+    }
+
+    .box4 {
+        background: #ccc;
+        margin: 10px 0;
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        h2{
+            line-height: 50px;
+        }
+        .navi{
+            display: flex;
+            a{
+                background: #fff;
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
+    }
+
+    .box5 {
+        
+        margin-bottom: 10px;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        li {
+            box-sizing: border-box;
+            width: calc((100% - 30px) / 4);
+            padding: 10px;
+            background: #f00;
+        }
+        img {}
+        strong {
+            background: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            @include ellips;
+        }
+        p {
+            // color: $point-color;
+            
+            background: #fff;
+            padding: 10px;
+            @include ellips(2,20px);
+        }
+    }
+} // 지우면 안돼요

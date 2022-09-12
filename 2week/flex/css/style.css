@@ -1,0 +1,158 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.blind {
+  /* display: none; */
+  /* 리더기가 못 읽어 */
+  /* 
+  t-9999px,l-9999px ti-9999px 이것도 안돼 성능저하! */
+  position: absolute;
+  width: 1px; /* 0은 안됨 안읽음 */
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+.inner {
+  width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100px;
+  background: #f00;
+}
+
+footer {
+  height: 100px;
+  background: #f00;
+}
+
+#flex5 .box1 {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+#flex5 .box1 .slide {
+  position: relative;
+  flex: 1;
+  height: 200px;
+  background: #ccc;
+}
+#flex5 .box1 .btn {
+  width: 30px;
+  height: 30px;
+  background: #f00;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#flex5 .box1 .btn.prev {
+  left: 10px;
+}
+#flex5 .box1 .btn.next {
+  right: 10px;
+}
+#flex5 .box2 {
+  height: 100px;
+  background: #00f;
+  margin-bottom: 10px;
+}
+#flex5 .box3 {
+  padding: 10px;
+  background: #ccc;
+}
+#flex5 .box3 ul {
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#flex5 .box3 li {
+  background: #00f;
+  height: 100px;
+}
+#flex5 .box3 li:nth-child(1) {
+  width: calc(80% - 5px);
+}
+#flex5 .box3 li:nth-child(2) {
+  width: calc(20% - 5px);
+}
+#flex5 .box3 li:nth-child(3) {
+  width: calc(30% - 5px);
+}
+#flex5 .box3 li:nth-child(4) {
+  width: calc(70% - 5px);
+}
+#flex5 .box4 {
+  background: #ccc;
+  margin: 10px 0;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+#flex5 .box4 h2 {
+  line-height: 50px;
+}
+#flex5 .box4 .navi {
+  display: flex;
+}
+#flex5 .box4 .navi a {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+}
+#flex5 .box5 {
+  margin-bottom: 10px;
+}
+#flex5 .box5 ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#flex5 .box5 li {
+  box-sizing: border-box;
+  width: calc((100% - 30px) / 4);
+  padding: 10px;
+  background: #f00;
+}
+#flex5 .box5 strong {
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#flex5 .box5 p {
+  background: #fff;
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-height: 40px;
+  line-height: 20px;
+}

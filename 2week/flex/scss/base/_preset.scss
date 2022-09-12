@@ -1,0 +1,17 @@
+.blind {
+    /* display: none; */
+    /* 리더기가 못 읽어 */
+    /* 
+    t-9999px,l-9999px ti-9999px 이것도 안돼 성능저하! */
+    position: absolute;
+    width: 1px; /* 0은 안됨 안읽음 */
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+
+.inner {
+    width: 800px;
+    margin: 0 auto;
+}
